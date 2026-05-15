@@ -15,12 +15,12 @@ export function AnimatedBackground() {
       <div className="hero-grid absolute inset-0 opacity-70" />
       <div className="noise-layer absolute inset-0 opacity-[0.055] dark:opacity-[0.075]" />
       <motion.div
-        className="absolute left-[12%] top-[24%] h-64 w-64 rounded-full bg-cyan-300/18 blur-3xl dark:bg-cyan-400/12"
+        className="absolute left-[12%] top-[24%] h-64 w-64 rounded-full bg-cyan-300/[0.18] blur-3xl dark:bg-cyan-400/[0.12]"
         animate={{ x: [0, 18, -10, 0], y: [0, -16, 10, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-[12%] right-[8%] h-72 w-72 rounded-full bg-emerald-300/14 blur-3xl dark:bg-blue-500/12"
+        className="absolute bottom-[12%] right-[8%] h-72 w-72 rounded-full bg-emerald-300/[0.14] blur-3xl dark:bg-blue-500/[0.12]"
         animate={{ x: [0, -24, 12, 0], y: [0, 20, -12, 0] }}
         transition={{ duration: 17, repeat: Infinity, ease: "easeInOut" }}
       />

@@ -15,7 +15,7 @@ export const projects: ProjectItem[] = [
     type: "Offline-first internal AI knowledge/support platform",
     featured: true,
     summary:
-      "I built an offline-first internal support chatbot platform that lets users upload PDFs, index documentation, and ask grounded AI questions using Retrieval-Augmented Generation. The platform retrieves relevant PDF chunks and indexed answers, then generates contextual responses with citations using a local language model.",
+      "I built an offline-first internal support chatbot platform that lets users upload PDFs, index documentation, and ask grounded AI questions using Retrieval-Augmented Generation. I retrieve relevant PDF chunks and indexed answers, then generate contextual responses with citations using a local language model.",
     features: [
       "JWT authentication",
       "admin dashboard",

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: #05070a;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #f7f9fb;
+}
+
+.dark body {
+  background: #05070a;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, transparent, black 16%, black 72%, transparent);
+  animation: gridPulse 8s ease-in-out infinite;
+}
+
+.dark .hero-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+}
+
+.noise-layer {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(15, 23, 42, 0.45) 0 1px, transparent 1px),
+    radial-gradient(circle at 75% 65%, rgba(15, 23, 42, 0.38) 0 1px, transparent 1px);
+  background-size: 18px 18px, 22px 22px;
+}
+
+.robot-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.18), transparent 34%);
+  background-size: 34px 34px, 34px 34px, 100% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

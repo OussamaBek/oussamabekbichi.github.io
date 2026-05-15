@@ -10,7 +10,7 @@ export type EducationItem = {
 export const education: EducationItem[] = [
   {
     degree: "Master of Science - Data Science",
-    university: "FernUniversitat in Hagen",
+    university: "FernUniversität in Hagen",
     dates: "April 2026 - Present",
     description:
       "I am currently pursuing a Master's degree in Data Science, expanding my knowledge in AI, machine learning, intelligent systems, and advanced data-driven software engineering.",
@@ -40,7 +40,7 @@ export const education: EducationItem[] = [
   },
   {
     degree: "Bachelor of Science - Computer Science",
-    university: "Universite Moulay Ismail, Meknes",
+    university: "Université Moulay Ismail, Meknes",
     description:
       "My studies included software engineering, databases, web development, robotics, game development with C++, and deep learning.",
     topics: [

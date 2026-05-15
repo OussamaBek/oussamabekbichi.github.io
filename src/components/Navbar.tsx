@@ -22,7 +22,7 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "border-b border-slate-200/70 bg-white/78 shadow-sm backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/70"
+          ? "border-b border-slate-200/70 bg-white/[0.78] shadow-sm backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/70"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -36,7 +36,7 @@ export function Navbar() {
           className="group inline-flex items-center gap-3 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950"
           aria-label="Go to top"
         >
-          <span className="grid h-10 w-10 place-items-center rounded-2xl border border-slate-200 bg-white text-sm font-semibold tracking-wide text-slate-950 shadow-sm transition duration-300 group-hover:-translate-y-0.5 group-hover:border-cyan-400 dark:border-white/10 dark:bg-white/8 dark:text-white">
+          <span className="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 bg-white text-sm font-semibold tracking-wide text-slate-950 shadow-sm transition duration-300 group-hover:-translate-y-0.5 group-hover:border-cyan-400 dark:border-white/10 dark:bg-white/[0.08] dark:text-white">
             OB
           </span>
           <span className="hidden text-sm font-medium text-slate-700 transition group-hover:text-slate-950 dark:text-slate-300 dark:group-hover:text-white sm:block">
@@ -64,7 +64,7 @@ export function Navbar() {
             aria-label="Open navigation menu"
             aria-expanded={isOpen}
             onClick={() => setIsOpen((current) => !current)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-slate-300/70 bg-white/80 text-slate-950 outline-none transition hover:border-cyan-400 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/8 dark:text-white dark:focus-visible:ring-offset-slate-950 lg:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-slate-300/70 bg-white/80 text-slate-950 outline-none transition hover:border-cyan-400 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/[0.08] dark:text-white dark:focus-visible:ring-offset-slate-950 lg:hidden"
           >
             <span className="relative h-4 w-5">
               <span
@@ -91,7 +91,7 @@ export function Navbar() {
         initial={false}
         animate={isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="overflow-hidden border-slate-200/70 bg-white/92 backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/92 lg:hidden"
+        className="overflow-hidden border-slate-200/70 bg-white/[0.92] backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/[0.92] lg:hidden"
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-1 px-5 pb-5 sm:px-8">
           {navLinks.map((link) => (
@@ -99,7 +99,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={closeMenu}
-              className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 outline-none transition hover:bg-slate-100 hover:text-slate-950 focus-visible:ring-2 focus-visible:ring-cyan-400 dark:text-slate-200 dark:hover:bg-white/8 dark:hover:text-white"
+              className="rounded-lg px-4 py-3 text-sm font-medium text-slate-700 outline-none transition hover:bg-slate-100 hover:text-slate-950 focus-visible:ring-2 focus-visible:ring-cyan-400 dark:text-slate-200 dark:hover:bg-white/[0.08] dark:hover:text-white"
             >
               {link.label}
             </a>

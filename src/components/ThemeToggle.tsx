@@ -14,7 +14,7 @@ export function ThemeToggle({ theme, onToggle }: ThemeToggleProps) {
       type="button"
       onClick={onToggle}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className="group relative inline-flex h-10 w-20 items-center rounded-full border border-slate-300/60 bg-white/80 p-1 text-slate-900 shadow-sm outline-none transition duration-300 hover:border-cyan-400/70 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/8 dark:text-white dark:hover:border-cyan-300/60 dark:focus-visible:ring-offset-slate-950"
+      className="group relative inline-flex h-10 w-20 items-center rounded-full border border-slate-300/60 bg-white/80 p-1 text-slate-900 shadow-sm outline-none transition duration-300 hover:border-cyan-400/70 focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-white/[0.08] dark:text-white dark:hover:border-cyan-300/60 dark:focus-visible:ring-offset-slate-950"
     >
       <span className="sr-only">Toggle theme</span>
       <motion.span
