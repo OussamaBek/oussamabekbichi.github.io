@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I build backend systems, AI tools, robotics projects, and intelligent software platforms."
+    />
+    <meta name="theme-color" content="#05070a" />
+    <meta property="og:title" content="Oussama Bekbichi | Software Developer" />
+    <meta
+      property="og:description"
+      content="I build backend systems, AI/RAG tools, robotics projects, healthcare software, infrastructure, and full-stack platforms."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://OussamaBek.github.io" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Oussama Bekbichi | Software Developer</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          var systemLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+          var theme = stored === "light" || stored === "dark" ? stored : systemLight ? "light" : "dark";
+          document.documentElement.classList.toggle("dark", theme === "dark");
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.colorScheme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
