@@ -11,7 +11,7 @@ export function Projects() {
       title="I build systems where AI, infrastructure, backend engineering, and usability meet."
       intro="My project work leans toward practical platforms, intelligent tools, robotics, privacy tooling, and machine learning applications."
     >
-      <motion.div variants={staggerContainer} className="mt-10 grid gap-6 lg:grid-cols-2">
+      <motion.div variants={staggerContainer} className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 lg:grid-cols-2">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

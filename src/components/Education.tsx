@@ -10,15 +10,15 @@ export function Education() {
       title="My academic path connects mathematics, software engineering, and data science."
       intro="I keep building on a foundation that mixes applied mathematics, computer science, machine learning, and practical software development."
     >
-      <motion.div variants={staggerContainer} className="mt-10 grid gap-5 lg:grid-cols-3">
+      <motion.div variants={staggerContainer} className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
         {education.map((item) => (
           <motion.article
             key={`${item.degree}-${item.university}`}
             variants={fadeUp}
             whileHover={{ y: -4 }}
-            className="rounded-lg border border-slate-200/80 bg-white/[0.76] p-6 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark"
+            className="rounded-lg border border-slate-200/80 bg-white/[0.76] p-5 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark sm:p-6"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-300 sm:text-sm sm:tracking-[0.2em]">
               {item.dates ?? "Computer Science"}
             </p>
             <h3 className="mt-4 text-xl font-semibold tracking-tight text-slate-950 dark:text-white">
@@ -36,7 +36,7 @@ export function Education() {
                 {item.topics.map((topic) => (
                   <span
                     key={topic}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300"
+                  className="max-w-full break-words rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs font-medium text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300 sm:px-3"
                   >
                     {topic}
                   </span>

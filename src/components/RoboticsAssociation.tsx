@@ -22,10 +22,10 @@ export function RoboticsAssociation() {
     >
       <motion.div
         variants={staggerContainer}
-        className="mt-10 grid gap-8 border-y border-slate-200/80 bg-slate-950 px-6 py-8 text-white shadow-soft-dark dark:border-white/10 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]"
+        className="mt-8 grid gap-6 border-y border-slate-200/80 bg-slate-950 px-5 py-6 text-white shadow-soft-dark dark:border-white/10 sm:mt-10 sm:gap-8 sm:px-8 sm:py-8 lg:grid-cols-[0.85fr_1.15fr]"
       >
         <motion.div variants={fadeUp}>
-          <p className="text-base leading-8 text-slate-300">
+          <p className="text-sm leading-7 text-slate-300 sm:text-base sm:leading-8">
             I connect this work with my robotics projects through simulation, intelligent interaction,
             experimentation, and shared learning environments.
           </p>
@@ -33,14 +33,14 @@ export function RoboticsAssociation() {
             {roboticsFocus.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/10 bg-white/[0.07] px-3 py-1.5 text-sm text-slate-200"
+                className="max-w-full break-words rounded-full border border-white/10 bg-white/[0.07] px-2.5 py-1.5 text-xs text-slate-200 sm:px-3 sm:text-sm"
               >
                 {item}
               </span>
             ))}
           </div>
         </motion.div>
-        <motion.div variants={fadeUp} className="relative min-h-64 overflow-hidden rounded-lg border border-white/10 bg-white/[0.045]">
+        <motion.div variants={fadeUp} className="relative min-h-56 overflow-hidden rounded-lg border border-white/10 bg-white/[0.045] sm:min-h-64">
           <div className="robot-grid absolute inset-0" />
           <motion.div
             aria-hidden="true"

@@ -10,20 +10,20 @@ export function Skills() {
       title="My toolkit spans backend engineering, AI, infrastructure, robotics, and full-stack work."
       intro="I like tools that help me build reliable systems, reason clearly about architecture, and move practical software into production."
     >
-      <motion.div variants={staggerContainer} className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <motion.div variants={staggerContainer} className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
         {skillGroups.map((group) => (
           <motion.article
             key={group.name}
             variants={fadeUp}
             whileHover={{ y: -4 }}
-            className="rounded-lg border border-slate-200/80 bg-white/[0.76] p-6 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark"
+            className="rounded-lg border border-slate-200/80 bg-white/[0.76] p-5 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark sm:p-6"
           >
             <h3 className="text-lg font-semibold text-slate-950 dark:text-white">{group.name}</h3>
             <div className="mt-5 flex flex-wrap gap-2">
               {group.skills.map((skill) => (
                 <span
                   key={`${group.name}-${skill}`}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300"
+                  className="max-w-full break-words rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300 sm:px-3 sm:text-sm"
                 >
                   {skill}
                 </span>

@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       whileHover={{ y: -6 }}
       transition={{ duration: 0.28, ease: "easeOut" }}
       className={`group relative overflow-hidden rounded-lg border border-slate-200/80 bg-white/[0.78] shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark ${
-        project.featured ? "p-6 sm:p-8 lg:col-span-2 lg:p-10" : "p-6 sm:p-7"
+        project.featured ? "p-5 sm:p-8 lg:col-span-2 lg:p-10" : "p-5 sm:p-7"
       }`}
     >
       <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -23,14 +23,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="relative">
         {project.type ? (
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-300 sm:mb-4 sm:text-sm sm:tracking-[0.2em]">
             {project.type}
           </p>
         ) : null}
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <h3
             className={`font-semibold tracking-tight text-slate-950 dark:text-white ${
-              project.featured ? "text-3xl sm:text-4xl" : "text-2xl"
+              project.featured ? "text-2xl sm:text-4xl" : "text-xl sm:text-2xl"
             }`}
           >
             {project.title}
@@ -44,7 +44,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         <p
           className={`mt-5 text-slate-600 dark:text-slate-300 ${
-            project.featured ? "max-w-4xl text-base leading-8 sm:text-lg" : "text-sm leading-7"
+            project.featured ? "max-w-4xl text-sm leading-7 sm:text-lg sm:leading-8" : "text-sm leading-7"
           }`}
         >
           {project.summary}
@@ -58,7 +58,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 {project.architecture.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-cyan-500/20 bg-cyan-500/[0.08] px-3 py-1.5 text-sm text-cyan-900 dark:border-cyan-300/20 dark:bg-cyan-300/[0.08] dark:text-cyan-100"
+                    className="max-w-full break-words rounded-full border border-cyan-500/20 bg-cyan-500/[0.08] px-2.5 py-1.5 text-xs text-cyan-900 dark:border-cyan-300/20 dark:bg-cyan-300/[0.08] dark:text-cyan-100 sm:px-3 sm:text-sm"
                   >
                     {item}
                   </span>
@@ -74,7 +74,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 {project.features.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300"
+                    className="max-w-full break-words rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300 sm:px-3 sm:text-sm"
                   >
                     {item}
                   </span>
@@ -89,7 +89,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               {project.focus.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300"
+                  className="max-w-full break-words rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300 sm:px-3 sm:text-sm"
                 >
                   {item}
                 </span>
@@ -104,7 +104,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             {project.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-full bg-slate-950 px-3 py-1.5 text-sm text-white dark:bg-white dark:text-slate-950"
+                className="max-w-full break-words rounded-full bg-slate-950 px-2.5 py-1.5 text-xs text-white dark:bg-white dark:text-slate-950 sm:px-3 sm:text-sm"
               >
                 {technology}
               </span>

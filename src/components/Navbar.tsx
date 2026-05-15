@@ -28,7 +28,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-8 lg:px-10"
       >
         <a
           href="#top"

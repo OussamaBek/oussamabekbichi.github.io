@@ -20,25 +20,25 @@ export function Experience() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="absolute left-4 top-2 hidden h-[calc(100%-1rem)] w-px origin-top bg-gradient-to-b from-cyan-400 via-emerald-300 to-transparent md:block"
         />
-        <motion.div variants={staggerContainer} className="space-y-6">
+        <motion.div variants={staggerContainer} className="space-y-4 sm:space-y-6">
           {experience.map((item) => (
             <motion.article
               key={`${item.organization}-${item.dates}`}
               variants={fadeUp}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.28, ease: "easeOut" }}
-              className="group relative rounded-lg border border-slate-200/80 bg-white/[0.76] p-6 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark md:ml-12 sm:p-8"
+              className="group relative rounded-lg border border-slate-200/80 bg-white/[0.76] p-5 shadow-soft backdrop-blur-xl transition-colors dark:border-white/10 dark:bg-white/[0.055] dark:shadow-soft-dark md:ml-12 sm:p-8"
             >
               <span className="absolute -left-[3.05rem] top-8 hidden h-5 w-5 rounded-full border-4 border-white bg-cyan-500 shadow-[0_0_0_8px_rgba(34,211,238,0.10)] dark:border-slate-950 md:block" />
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-300 sm:text-sm sm:tracking-[0.2em]">
                     {item.dates}
                   </p>
-                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">
+                  <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-2xl">
                     {item.role}
                   </h3>
-                  <p className="mt-2 text-base font-medium text-slate-700 dark:text-slate-200">
+                  <p className="mt-2 break-words text-sm font-medium text-slate-700 dark:text-slate-200 sm:text-base">
                     {item.organization}
                     {item.location ? <span className="text-slate-400"> / {item.location}</span> : null}
                   </p>
@@ -50,7 +50,7 @@ export function Experience() {
                 ) : null}
               </div>
 
-              <p className="mt-6 max-w-4xl text-base leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-5 max-w-4xl text-sm leading-7 text-slate-600 dark:text-slate-300 sm:mt-6 sm:text-base sm:leading-8">
                 {item.summary}
               </p>
 
@@ -61,7 +61,7 @@ export function Experience() {
                     {item.focus.map((focus) => (
                       <span
                         key={focus}
-                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600 transition group-hover:border-cyan-300/70 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300"
+                        className="max-w-full break-words rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs text-slate-600 transition group-hover:border-cyan-300/70 dark:border-white/10 dark:bg-white/[0.045] dark:text-slate-300 sm:px-3 sm:text-sm"
                       >
                         {focus}
                       </span>
@@ -74,7 +74,7 @@ export function Experience() {
                         {item.technologies.map((technology) => (
                           <span
                             key={technology}
-                            className="rounded-full bg-slate-950 px-3 py-1.5 text-sm text-white dark:bg-white dark:text-slate-950"
+                            className="max-w-full break-words rounded-full bg-slate-950 px-2.5 py-1.5 text-xs text-white dark:bg-white dark:text-slate-950 sm:px-3 sm:text-sm"
                           >
                             {technology}
                           </span>
