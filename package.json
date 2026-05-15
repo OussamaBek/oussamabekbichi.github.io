@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:root": "tsc -b && vite build --base=/",
+    "build:project": "tsc -b && vite build --base=/oussamabekbichi.github.io/",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:project",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
